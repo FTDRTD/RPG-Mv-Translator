@@ -68,6 +68,16 @@ package.json (NW.js)：
 }
 ```
 
+## 使用步骤
+1. 安装依赖：确保Ollama运行（`ollama run llama2`），LM Studio可选。
+2. 运行程序：`./nw.exe .` 启动控制面板GUI。
+3. 配置：设置翻译服务、Ollama URL、加载模型列表并选择模型（e.g., Llama3.2-3B）、语言，保存。
+4. 注入游戏：拖拽或输入RPG MV项目路径，点击“注入插件”（复制插件到js/plugins目录）。
+5. 运行游戏：手动启动RPG MV游戏（Game.exe），插件自动钩子替换游戏内文本为译文（无需GUI嵌入）。
+6. 监控：GUI日志显示翻译过程（若桥接，可实时更新；当前模拟测试），检查缓存。
+7. 管理缓存：加载/导出/导入JSON，确保一一对应存储。
+8. 性能：本地翻译<2s，缓存优先避免重复；模型如Qwen2.5-3b高效。
+
 translations.json 示例：
 ```json
 {

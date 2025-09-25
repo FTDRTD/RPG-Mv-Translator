@@ -9,22 +9,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- 左侧游戏窗口 -->
-        <div id="game-panel" class="panel game-panel">
-            <h2>游戏窗口</h2>
-            <iframe id="game-iframe" src="./www/index.html" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
-            <div class="inject-info">拖拽RPG MV游戏文件夹到此处，或输入路径注入插件</div>
-        </div>
-
-        <!-- 右侧控制面板 -->
-        <div id="control-panel" class="panel control-panel">
-            <h2>控制面板</h2>
+        <!-- 控制面板 (全屏) -->
+        <div id="control-panel" class="panel control-panel full-width">
+            <h2>RPG MV 翻译器控制面板</h2>
+            <p class="info">注入插件后，手动运行RPG MV游戏，插件将在游戏内自动替换原文为译文。无需嵌入游戏窗口。</p>
 
             <!-- 注入面板 -->
             <section class="section">
                 <h3>游戏注入</h3>
                 <div id="drop-zone" class="drop-zone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
-                    <p>拖拽游戏文件夹或可执行文件</p>
+                    <p>拖拽RPG MV游戏文件夹或可执行文件</p>
                 </div>
                 <input type="text" id="game-path" placeholder="输入游戏路径 (e.g., C:/Games/MyRPG)" class="input">
                 <button onclick="injectPlugin()">注入插件</button>
@@ -54,7 +48,7 @@
 
             <!-- 翻译日志 -->
             <section class="section">
-                <h3>实时翻译日志</h3>
+                <h3>实时翻译日志 (游戏运行时更新)</h3>
                 <div id="translation-log" class="log"></div>
                 <button onclick="clearLog()">清空日志</button>
             </section>

@@ -16,3 +16,7 @@
 [0925/131051.751:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 5532: 操作成功完成。 (0x0)
 [0925/131051.753:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 5516: 操作成功完成。 (0x0)
 [0925/131051.761:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 4440: 操作成功完成。 (0x0)
+[0925/131221.759:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 5424: 操作成功完成。 (0x0)
+[0925/131229.706:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 3984: 操作成功完成。 (0x0)
+[0925/131251.330:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 5520: 操作成功完成。 (0x0)
+[0925/131352.569:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 4640: 操作成功完成。 (0x0)

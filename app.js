@@ -416,7 +416,7 @@ function handleImport(e) {
   }
 }
 
-// 模拟翻译 (实际替换为游戏事件监听)
+// 模拟翻译 (实际替换为游戏事件监听；注入后游戏运行时插件处理替换)
 async function simulateTranslation() {
   if (!config.enabled) return;
 
