@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG MV 翻译器</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧游戏窗口 -->
+        <div id="game-panel" class="panel game-panel">
+            <h2>游戏窗口</h2>
+            <iframe id="game-iframe" src="./www/index.html" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
+            <div class="inject-info">拖拽RPG MV游戏文件夹到此处，或输入路径注入插件</div>
+        </div>
+
+        <!-- 右侧控制面板 -->
+        <div id="control-panel" class="panel control-panel">
+            <h2>控制面板</h2>
+
+            <!-- 注入面板 -->
+            <section class="section">
+                <h3>游戏注入</h3>
+                <div id="drop-zone" class="drop-zone" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
+                    <p>拖拽游戏文件夹或可执行文件</p>
+                </div>
+                <input type="text" id="game-path" placeholder="输入游戏路径 (e.g., C:/Games/MyRPG)" class="input">
+                <button onclick="injectPlugin()">注入插件</button>
+                <div id="inject-status"></div>
+            </section>
+
+            <!-- 配置面板 -->
+            <section class="section">
+                <h3>配置</h3>
+                <label>翻译服务: <select id="service-select">
+                    <option value="ollama">Ollama</option>
+                    <option value="lmstudio">LM Studio</option>
+                    <option value="online">在线API</option>
+                </select></label><br>
+                <label>Ollama URL: <input type="url" id="ollama-url" value="http://localhost:11434" class="input"></label><br>
+                <label>模型:
+                  <select id="model-select" class="input">
+                    <option value="">加载模型...</option>
+                  </select>
+                </label>
+                <button onclick="loadOllamaModels()">加载Ollama模型列表</button><br>
+                <label>源语言: <input type="text" id="source-lang" value="ja" class="input"></label><br>
+                <label>目标语言: <input type="text" id="target-lang" value="zh-CN" class="input"></label><br>
+                <label><input type="checkbox" id="enabled" checked> 启用翻译</label><br>
+                <button onclick="saveConfig()">保存配置</button>
+            </section>
+
+            <!-- 翻译日志 -->
+            <section class="section">
+                <h3>实时翻译日志</h3>
+                <div id="translation-log" class="log"></div>
+                <button onclick="clearLog()">清空日志</button>
+            </section>
+
+            <!-- 缓存管理 -->
+            <section class="section">
+                <h3>缓存管理</h3>
+                <div id="cache-stats">缓存条目: 0</div>
+                <ul id="cache-list"></ul>
+                <button onclick="loadCache()">加载缓存</button>
+                <button onclick="exportCache()">导出JSON</button>
+                <button onclick="importCache()">导入JSON</button>
+                <input type="file" id="import-file" accept=".json" style="display:none;" onchange="handleImport(event)">
+            </section>
+        </div>
+    </div>
+</body>
+</html>

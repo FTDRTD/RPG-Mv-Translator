@@ -1,0 +1,5 @@
+[0925/124812.069:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 1964: 操作成功完成。 (0x0)
+[0925/124812.080:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 2152: 操作成功完成。 (0x0)
+[0925/124812.102:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 2328: 操作成功完成。 (0x0)
+[0925/124812.157:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 3324: 操作成功完成。 (0x0)
+[0925/124815.203:ERROR:chrome\common\logging_chrome.cc:566] Invalid logging destination: 4048: 操作成功完成。 (0x0)

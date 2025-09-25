@@ -1,0 +1,18 @@
+{
+  "name": "rpg-mv-translator",
+  "version": "1.0.0",
+  "description": "RPG Maker MV实时翻译程序",
+  "main": "index.html",
+  "window": {
+    "title": "RPG MV 翻译器",
+    "icon": "icon.png",
+    "width": 1280,
+    "height": 800,
+    "min_width": 1024,
+    "min_height": 600,
+    "position": "center",
+    "resizable": true
+  },
+  "node-remote": "http://*",
+  "chromium-args": "--enable-logging --disable-web-security"
+}
